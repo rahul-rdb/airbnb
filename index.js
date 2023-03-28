@@ -14,7 +14,7 @@ import roomRoutes from "./routes/rooms.js";
 const app = express();
 dotenv.config();
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
 const CONNECTION_URL = process.env.MONGOOSE_URL;
 
 mongoose.set("strictQuery", false);
