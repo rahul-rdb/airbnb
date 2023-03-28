@@ -15,11 +15,11 @@ const app = express();
 dotenv.config();
 
 const PORT = process.env.PORT;
-const CONNECTION_URL = process.env.MONGOOSE_URL;
+// const CONNECTION_URL = process.env.MONGOOSE_URL;
 
 mongoose.set("strictQuery", false);
 mongoose
-  .connect(CONNECTION_URL)
+  .connect(process.env.MONGOOSE_URL)
   .then(() => {
     console.log("connected to Mongoose");
   })
